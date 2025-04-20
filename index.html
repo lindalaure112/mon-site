@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewpot" content="width=device-widht,initial-scale=1.0">
+    <title>Restaurant Vitrine</title>
+    <link  rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css/regular.css"
+    <body>
+        <!--barre de navigation-->
+        <header>
+            <h1><strong>Bienvenue Chez DeVT Development Restaurant</strong></h1>
+            <div class="logo">
+                    <img src="logo.png" alt="logo du site">
+                    <a><b>Appelez-nous: 659867487</b></a>
+            </div>
+            <nav class="navBar">
+                <ul class="nav-links">
+                    <li><a href="#">Realisations</a></li>
+                    <li><a href="#">Entrees</a></li>
+                    <li><a href="#">Plats</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Boissons</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+            <div class="carousel">
+                <button class="prev" onclick="moveSlide(-1)">❮</button>>
+                <div class="slides">
+                   <img class="slide"  src="01.jpg" alt="01">
+                   <img class="slide" src="02.jpeg" alt="02">
+                   <img class="slide" src="03.jpg" alt="03">
+                   <button class="next" onclick="moveSlide(1)">❯</button>
+                </div>
+            </div><br>
+               <div class="container">
+                    <div class="Suggestions"> 
+                        <h2> <strong>Suggestions de la semaine:</strong></h2></strong>
+                        <br><br>
+                       <b>-ENTREES</b><br>
+                        Salade de crudités,sauce vinaigrette et jus de fruits: 25000FCFA<br>
+                        Coeur de riz de veau roti,poelée de légumes de saison,réduction aux éclats de , morilles: 28500FCFA<br><br>
+                        <b>-PLATS</b><br>
+                        Entrecote de boeuf, Ndolé, Plantins et batons de manioc:45000FCFA<br>
+                        Koki, manioc:23000FCFA<br><br>
+                        <b>-DESSERT</b><br>
+                        Beignet sucré au manioc Entier:15000FCFA
+                    </div>
+    
+                        <div  class="cadre">
+                         <h3><b>Nous vous proposons un menu 3 services au choix</b></h3><br><br>
+                          Celui-ci varie selon le marché et les saisons,il peut changer quotidiennement comme hebdomadairement
+                          Dégustez des plats savoureux dans un cadre exceptionnel ! Cuisine raffinée.Service haut de gamme.
+                          Tous les ingrédients sont frais et soigneusement choisis par notre chef.
+                          En espérant que vous prendrez du plaisir à manger chez nous.<br><br>
+                          Ne ratez pas l'ocasion des meilleurs tables.<br><br>
+                          <button onclick="Text"><strong>RESERVEZ VOTRE TABLE</strong></button> 
+                        </div>
+                </div><br><br>
+                           <section class="testimonials">
+                             <h1><strong>Ce que nos clients pensent de nous</strong></h1>
+                             <br><br>
+                                <div class="testimon">
+                                    <div class="testimonial">
+                                       <h4><b>Cindy M.</b></h4>
+                                       <p>Nous nous y sommes rendu un vendredi soir en amoureux prix très accessibles pour un restaurant gastronomique</p>
+                                    </div>
+                                        <div class="testimonial">
+                                          <h4><b>Nancy D.</b></h4>
+                                          <p>Très bon,Le menu était délicieux,Les vins aussi</p>
+                                        </div>
+                                                <div class="testimonial">
+                                                 <h4><b>Romuald H</b></h4>
+                                                 <p>Très bon,service rapide et super bon,rien à redire</p>
+                                                </div>
+                                                    <div class="testimonial">
+                                                     <h4><b>Serge G</b></h4>
+                                                     <p>Un petit lunch entre amis avec un delicieux poisson en plat,un vin blanc conseillé par le patron,à refaire dès que possible....</p>
+                                                    </div>
+                                                            <div class="testimonial"> 
+                                                                <h4><b>Patricia H</b></h4>
+                                                                <p> Beau restaurant installé le long de l'eau. Personnel très professionnel et surtout cuisine raffinée</p>
+                                                            </div>
+                                                                <div class="testimonial">
+                                                                 <h4><b>Fabrice C</b></h4>
+                                                                  <p>Le chef a encore ravi nos papilles! Que ça soit par le forfait vin,avec un serveur très conciliant selon les goùts,que par le menu 3 services</p>
+                                                                </div>
+                                                                <a href="text">Plus de témoignages Clients ici</button><br><br>
+                                </div>
+                            </section><br><br><br>
+                                                                        <footer>
+                                                                        
+                                                                         <a href="lien">monrestaurant.be</a> Numéro entreprise: Bastos-Yaoundé tel:671999868
+                                                                        </footer>
+                                                                    
+                                                                         <!--script de defilage de la page-->
+                                                                            <script>
+                                                                              let currentSlide = 0;
+                                                                               const slides = document.querySelectorAll(".slide");
+                                                                      
+                                                                                function showSlide(index) {
+                                                                                slides.forEach(slide => slide.style.display = "none");
+                                                                                slides[index].style.display = "block";
+                                                                                }
+                                                                      
+                                                                                function moveSlide(step) {
+                                                                                currentSlide = (currentSlide + step + slides.length) % slides.length;
+                                                                                showSlide(currentSlide);
+                                                                                }
+                                                                      
+                                                                                // Affiche la première image au chargement
+                                                                                showSlide(currentSlide);
+                                                                            </script>
+                                                                              <i class="far fa-smile"></i><!--exemple d'icone regular-->
+    </body>
+</html>
